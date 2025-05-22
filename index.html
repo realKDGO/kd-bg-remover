@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wipey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/icon.png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon.png">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">Wipey</h1>
+            <div class="tagline-container">
+                <p class="tagline">One Click. No Background.</p>
+            </div>
+        </header>
+
+        <!-- Upload Area -->
+        <div id="upload-container" class="upload-container">
+            <div class="drop-zone" id="drop-zone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="upload-icon">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" x2="12" y1="3" y2="15"></line>
+                </svg>
+                <p class="upload-text">Drop your image here or click to browse</p>
+            </div>
+        </div>
+
+        <!-- Preview Area -->
+        <div id="preview-container" class="preview-container hidden">
+            <div class="result-header">
+                <p class="result-notice">Result will appear here</p>
+            </div>
+            
+            <div class="image-comparison">
+                <div class="image-column">
+                    <div class="image-label">
+                        <span>Original Image</span>
+                        <button id="delete-btn" class="delete-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="delete-icon">
+                                <path d="M3 6h18"></path>
+                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                <line x1="10" x2="10" y1="11" y2="17"></line>
+                                <line x1="14" x2="14" y1="11" y2="17"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="original-image-container" class="image-box">
+                        <!-- Original image will appear here -->
+                    </div>
+                </div>
+                
+                <div class="image-column">
+                    <div class="image-label">
+                        <span>Processed Result</span>
+                        <div class="delete-btn-placeholder"></div>
+                    </div>
+                    <div id="processed-result-container" class="image-box">
+                        <div class="placeholder-content">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="placeholder-icon">
+                                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                                <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                                <circle cx="10" cy="12" r="2"></circle>
+                                <path d="m20 17-1.296-1.296a2.41 2.41 0 0 0-3.408 0L9 22"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="process-btn" class="process-btn">
+                    Remove Background
+                </button>
+                <button id="download-btn" class="download-btn" disabled>
+                    Download
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Developed/Designed by <a href="https://kdgo-portfolio.vercel.app/" class="kd-resume" target="_blank" rel="noopener noreferrer">King David</a> | <a href="https://github.com/realKDGO" class="github" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
