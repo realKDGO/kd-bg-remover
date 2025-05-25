@@ -298,7 +298,7 @@ body {
 
 .github {
     color: var(--footer-color);
-    text-decoration: none;
+    text-decoration: underline;
     transition: color 0.2s ease;
 }
 
@@ -312,7 +312,7 @@ body {
 
 .kd-resume {
     color: var(--footer-color);
-    text-decoration: none;
+    text-decoration: underline;
     transition: color 0.2s ease;
 }
 
